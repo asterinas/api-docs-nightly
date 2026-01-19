@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"macro":["field_ptr","read_union_field"],"mod":["coeff","dup","fixed_point","mem_obj_slice","per_cpu_counter","printer","ranged_integer","safe_ptr","slot_vec","union_read_ptr"]};
