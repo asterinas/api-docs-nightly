@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["cgroup","cmdline","comm","environ","exe","fd","gid_map","maps","mem","mountinfo","oom_score_adj","stat","status","uid_map"],"struct":["TaskDirOps","TidDirOps"]};

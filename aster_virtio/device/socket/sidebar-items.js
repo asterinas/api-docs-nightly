@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DEVICE_NAME"],"fn":["all_devices","get_device","handle_recv_irq","init","register_device","register_recv_callback"],"mod":["buffer","config","connect","device","error","header"],"static":["VSOCK_DEVICE_TABLE"],"traitalias":["VsockDeviceIrqHandler"]};
