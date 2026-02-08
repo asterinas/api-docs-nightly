@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DEVICE_NAME"],"enum":["ReqType","RespStatus"],"mod":["device"],"struct":["VirtioBlockConfig","VirtioBlockFeature","VirtioBlockGeometry","VirtioBlockTopology"]};
