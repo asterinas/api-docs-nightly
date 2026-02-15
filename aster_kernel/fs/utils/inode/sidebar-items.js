@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["InodeType","MknodType","SymbolicLink"],"struct":["Extension","InodeWriter","Metadata","Permission"],"trait":["Inode","InodeIo"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DEVICE_NAME"],"enum":["InputConfigSelect"],"mod":["device"],"struct":["VirtioInputConfig","VirtioInputEvent"]};

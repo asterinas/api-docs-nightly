@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["VIRTIO_VSOCK_HDR_LEN"],"enum":["VirtioVsockOp","VsockType"],"struct":["ShutdownFlags","VirtioVsockHdr","VsockDeviceAddr"]};
