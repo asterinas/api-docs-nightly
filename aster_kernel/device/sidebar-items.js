@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["init_in_first_kthread","init_in_first_process"],"mod":["evdev","fb","mem","misc","pty","registry","shm","tty"]};

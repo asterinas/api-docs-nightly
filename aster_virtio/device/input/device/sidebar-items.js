@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["ABS","FF","FF_STATUS","KEY","LED","MSC","PWR","REL","REP","SND","SW","SYN"],"struct":["InputDevice","InputProp"]};

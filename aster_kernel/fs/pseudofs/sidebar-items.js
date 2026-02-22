@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["ANON_INODEFS_MAGIC","PIDFDFS_MAGIC","PIPEFS_MAGIC","ROOT_INO","SOCKFS_MAGIC"],"enum":["PseudoInodeType"],"fn":["init","now"],"struct":["AnonInodeFs","PidfdFs","PipeFs","PipeFsType","PseudoFs","PseudoInode","SockFs","SockFsType"]};
