@@ -1,0 +1,9 @@
+(function() {
+    var implementors = Object.fromEntries([["aster_kernel",[["impl SysBranchNode for <a class=\"struct\" href=\"aster_kernel/fs/cgroupfs/systree_node/struct.CgroupNode.html\" title=\"struct aster_kernel::fs::cgroupfs::systree_node::CgroupNode\">CgroupNode</a>"],["impl SysBranchNode for <a class=\"struct\" href=\"aster_kernel/fs/cgroupfs/systree_node/struct.CgroupSystem.html\" title=\"struct aster_kernel::fs::cgroupfs::systree_node::CgroupSystem\">CgroupSystem</a>"],["impl SysBranchNode for <a class=\"struct\" href=\"aster_kernel/fs/configfs/systree_node/struct.ConfigRootNode.html\" title=\"struct aster_kernel::fs::configfs::systree_node::ConfigRootNode\">ConfigRootNode</a>"],["impl SysBranchNode for <a class=\"struct\" href=\"aster_kernel/fs/registry/struct.FsRegistry.html\" title=\"struct aster_kernel::fs::registry::FsRegistry\">FsRegistry</a>"],["impl SysBranchNode for <a class=\"struct\" href=\"aster_kernel/fs/sysfs/kernel/struct.KernelSysNodeRoot.html\" title=\"struct aster_kernel::fs::sysfs::kernel::KernelSysNodeRoot\">KernelSysNodeRoot</a>"],["impl SysBranchNode for <a class=\"struct\" href=\"aster_kernel/security/tsm/struct.ReportSet.html\" title=\"struct aster_kernel::security::tsm::ReportSet\">ReportSet</a>"],["impl SysBranchNode for <a class=\"struct\" href=\"aster_kernel/security/tsm/struct.Tsm.html\" title=\"struct aster_kernel::security::tsm::Tsm\">Tsm</a>"]]]]);
+    if (window.register_implementors) {
+        window.register_implementors(implementors);
+    } else {
+        window.pending_implementors = implementors;
+    }
+})()
+//{"start":57,"fragment_lengths":[1352]}
