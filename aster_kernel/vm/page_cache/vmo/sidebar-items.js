@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["CommitMode","VmoCommitError"],"fn":["get_page_idx_range"],"mod":["committed_page","options"],"struct":["BackedVmo","Vmo","VmoFlags","WritableMappingStatus"]};

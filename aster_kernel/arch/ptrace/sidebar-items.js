@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["REG_RULES","USER_MODIFIABLE_RFLAGS_MASK"],"enum":["Policy"],"fn":["check_user_offset","disable_single_step","enable_single_step","is_user_addr","read_user_word","read_word","word_range","write_user_word","write_word"],"macro":["off"],"struct":["CUserRegsStruct","RegRule"]};

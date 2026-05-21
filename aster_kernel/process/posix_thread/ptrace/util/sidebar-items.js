@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["PtraceContRequest","PtraceEvent","PtraceStopResult","StopDeliverySignal"],"struct":["PtraceOptions","PtraceWaitStatus"]};

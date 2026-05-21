@@ -1,0 +1,1 @@
+rd_("CjIf true, all LXAPICs must be configured using physical \xe2\x80\xa6c\xe2\x80\xa60000ClIf true, OSPM should use the ACPI power management timer \xe2\x80\xa6CdSupports ENCLV instruction leaves EINCVIRTCHILD, \xe2\x80\xa60")
