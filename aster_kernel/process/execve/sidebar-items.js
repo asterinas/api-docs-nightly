@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["apply_caps_from_exec","apply_set_gid","apply_set_uid","do_execve","do_execve_no_return","make_current_main_thread","read_cstring_vec","reset_vfork_child","set_cpu_context","unshare_and_close_files","unshare_and_reset_sigdispositions","wait_other_threads_exit"]};
