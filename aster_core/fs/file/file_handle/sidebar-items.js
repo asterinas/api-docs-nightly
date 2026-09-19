@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Mappable","SyncMode"],"struct":["StatusFlagsUpdate"],"trait":["FileLike"]};
