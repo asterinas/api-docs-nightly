@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["read_pvclock_time_snapshot","read_wall_clock_epoch"],"static":["ACPI_INFO"],"struct":["AcpiInfo","PvclockTimeSnapshot"]};
