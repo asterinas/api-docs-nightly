@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DEBUG_REGS_COUNT","DEBUG_REGS_OFFSET","DEBUG_STATUS_DEFAULT_VALUE","LINUX_USER_CS","LINUX_USER_SS","REG_RULES"],"enum":["Policy"],"fn":["check_user_offset","debug_register_index","is_user_addr","read_word","word_range","write_word"],"macro":[["off",1]],"struct":["CUserRegsStruct","PtraceState","RegRule"]};
