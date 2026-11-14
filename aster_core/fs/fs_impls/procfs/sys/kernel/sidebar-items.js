@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["cap_last_cap","overflow_gid","overflow_uid","pid_max","tainted","uts","yama"],"struct":["KernelDirOps"]};
