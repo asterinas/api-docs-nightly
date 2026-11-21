@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["KOBJECT_UEVENT_GROUP_ID"],"fn":["broadcast_uevent"],"mod":["bound","message"],"type":["NetlinkUeventSocket"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["check_nice_capability","check_setpriority_permission","set_priority_one","sys_set_priority"]};
