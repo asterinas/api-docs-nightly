@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["boot"],"macro":[["__log_prefix",1],["current",1],["dispatch_ioctl",1],["errno",1],["ioc",1],["register_poweroff_handler",1],["register_restart_handler",1]],"mod":["arch","context","cpu","device","driver","error","events","fs","init","ipc","net","power","prelude","process","sched","security","syscall","thread","time","util","vdso","vm"]};

@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="A contiguous growable array type with heap-allocated contents, written `Vec&#60;T&#62;`."><title>aster_core::prelude::vec - Rust</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2"href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-1f5a765c.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="aster_core" data-themes="" data-resource-suffix="" data-rustdoc-version="1.102.0-nightly (5f4effd57 2026-11-13)" data-channel="nightly" data-search-js="search-69faa2c4.js" data-stringdex-js="stringdex-b5109af9.js" data-settings-js="settings-9b351432.js" ><script src="../../../static.files/storage-41dd4d93.js"></script><script defer src="../sidebar-items.js"></script><script defer src="../../../static.files/main-419f3a3f.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-101b5a15.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-eab170b8.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc mod"><a class="skip-main-content" href="#main-content">Skip to main content</a><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><rustdoc-topbar><h2><a href="#">Module vec</a></h2></rustdoc-topbar><nav class="sidebar"><div class="sidebar-crate"><h2><a href="../../../aster_core/index.html">aster_<wbr>core</a><span class="version">0.1.0</span></h2></div><div class="sidebar-elems"><section id="rustdoc-toc"><h2 class="location"><a href="#">Module vec</a></h2><h3><a href="#">Sections</a></h3><ul class="block top-toc"><li><a href="#examples" title="Examples">Examples</a></li><li><a href="#memory-layout" title="Memory layout">Memory layout</a></li></ul><h3><a href="#structs">Module Items</a></h3><ul class="block"><li><a href="#structs" title="Structs">Structs</a></li></ul></section><div id="rustdoc-modnav"><h2><a href="../index.html">In aster_<wbr>core::<wbr>prelude</a></h2></div></div></nav><div class="sidebar-resizer" title="Drag to resize sidebar"></div><main><div class="width-limiter"><section id="main-content" class="content" tabindex="-1"><div class="main-heading"><div class="rustdoc-breadcrumbs"><a href="../../index.html">aster_core</a>::<wbr><a href="../index.html">prelude</a></div><h1>Module <span>vec</span>&nbsp;<button id="copy-path" title="Copy item path to clipboard">Copy item path</button></h1><rustdoc-toolbar></rustdoc-toolbar><span class="sub-heading"><span class="since" title="Stable since Rust version 1.0.0">1.0.0</span></span></div><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>A contiguous growable array type with heap-allocated contents, written
+<code>Vec&lt;T&gt;</code>.</p>
+<p>Vectors have <em>O</em>(1) indexing, amortized <em>O</em>(1) push (to the end) and
+<em>O</em>(1) pop (from the end).</p>
+<p>Vectors ensure they never allocate more than <code>isize::MAX</code> bytes.</p>
+<h2 id="examples"><a class="doc-anchor" href="#examples">§</a>Examples</h2>
+<p>You can explicitly create a <a href="../struct.Vec.html" title="struct aster_core::prelude::Vec"><code>Vec</code></a> with <a href="../struct.Vec.html#method.new" title="associated function aster_core::prelude::Vec::new"><code>Vec::new</code></a>:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">let </span>v: Vec&lt;i32&gt; = Vec::new();</code></pre></div>
+<p>…or by using the <a href="../macro.vec.html" title="macro aster_core::prelude::vec"><code>vec!</code></a> macro:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">let </span>v: Vec&lt;i32&gt; = <span class="macro">vec!</span>[];
+
+<span class="kw">let </span>v = <span class="macro">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];
+
+<span class="kw">let </span>v = <span class="macro">vec!</span>[<span class="number">0</span>; <span class="number">10</span>]; <span class="comment">// ten zeroes</span></code></pre></div>
+<p>You can <a href="../struct.Vec.html#method.push" title="method aster_core::prelude::Vec::push"><code>push</code></a> values onto the end of a vector (which will grow the vector
+as needed):</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">let </span><span class="kw-2">mut </span>v = <span class="macro">vec!</span>[<span class="number">1</span>, <span class="number">2</span>];
+
+v.push(<span class="number">3</span>);</code></pre></div>
+<p>Popping values works in much the same way:</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">let </span><span class="kw-2">mut </span>v = <span class="macro">vec!</span>[<span class="number">1</span>, <span class="number">2</span>];
+
+<span class="kw">let </span>two = v.pop();</code></pre></div>
+<p>Vectors also support indexing (through the [<code>Index</code>] and [<code>IndexMut</code>] traits):</p>
+
+<div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">let </span><span class="kw-2">mut </span>v = <span class="macro">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];
+<span class="kw">let </span>three = v[<span class="number">2</span>];
+v[<span class="number">1</span>] = v[<span class="number">1</span>] + <span class="number">5</span>;</code></pre></div><h2 id="memory-layout"><a class="doc-anchor" href="#memory-layout">§</a>Memory layout</h2>
+<p>A <a href="../struct.Vec.html" title="struct aster_core::prelude::Vec"><code>Vec</code></a> conceptually consists of a raw pointer <code>ptr</code> to the start of the allocation, a
+length <code>len</code>, a capacity <code>cap</code>, and an allocator <code>alloc</code>.
+While the exact fields and their order are not specified, a <a href="../struct.Vec.html" title="struct aster_core::prelude::Vec"><code>Vec</code></a> can be converted to and
+from these parts using <a href="../struct.Vec.html#method.into_raw_parts_with_allocator" title="method aster_core::prelude::Vec::into_raw_parts_with_allocator"><code>Vec::into_raw_parts_with_allocator</code></a>, <a href="../struct.Vec.html#method.from_raw_parts_in" title="associated function aster_core::prelude::Vec::from_raw_parts_in"><code>Vec::from_raw_parts_in</code></a>,
+<a href="../struct.Vec.html#method.into_raw_parts" title="method aster_core::prelude::Vec::into_raw_parts"><code>Vec::into_raw_parts</code></a>, and <a href="../struct.Vec.html#method.from_raw_parts" title="associated function aster_core::prelude::Vec::from_raw_parts"><code>Vec::from_raw_parts</code></a>, as well as their [<code>NonNull</code>]-based
+versions.</p>
+<p>The parts of a <a href="../struct.Vec.html" title="struct aster_core::prelude::Vec"><code>Vec</code></a> have the following invariants:</p>
+<ul>
+<li>
+<p>If <a href="size_of"><code>size_of::&lt;T&gt;()</code></a> and <code>cap</code> are non-zero, then:</p>
+<ul>
+<li><code>ptr</code> must point to the start of a memory block <a href="crate::alloc::Allocator#currently-allocated-memory"><em>currently allocated</em></a> via <code>alloc</code>.</li>
+<li><a href="crate::alloc::Layout::array"><code>Layout::array::&lt;T&gt;(cap)</code></a> must <a href="crate::alloc::Allocator#memory-fitting"><em>fit</em></a> the memory block of <code>ptr</code>. In particular,
+<ul>
+<li><code>T</code> must have the same alignment as the <a href="crate::alloc::Layout"><code>Layout</code></a> <code>ptr</code> was allocated with, and</li>
+<li><code>size_of::&lt;T&gt;() * cap</code> must be at least the size of the <a href="crate::alloc::Layout"><code>Layout</code></a> <code>ptr</code> was
+allocated with, and at most the size of the allocation returned the allocator.</li>
+</ul>
+</li>
+<li><code>size_of::&lt;T&gt;() * cap</code> must be at most [<code>isize::MAX</code>].
+See the safety documentation of [<code>pointer::offset</code>].</li>
+</ul>
+</li>
+<li>
+<p>If <a href="size_of"><code>size_of::&lt;T&gt;()</code></a> or <code>cap</code> is zero, then <code>ptr</code> must be any sufficiently aligned non-null pointer.</p>
+<p>NOTE: <code>ptr</code> will not be passed to the allocator for deallocation by the destructor of <a href="../struct.Vec.html" title="struct aster_core::prelude::Vec"><code>Vec</code></a>
+in this case. Thus, it is unwise to use a pointer acquired from the allocator for this, as
+overallocated memory may end up being leaked. Use [<code>ptr::dangling</code>] instead.</p>
+</li>
+<li>
+<p>The following must always be satisfied:</p>
+<ul>
+<li><code>len</code> needs to be less than or equal to <code>cap</code>.</li>
+<li>At <code>ptr</code>, there are at least <code>len</code> valid values of type <code>T</code>, laid out contiguously
+(like an array). These values are considered owned by the <a href="../struct.Vec.html" title="struct aster_core::prelude::Vec"><code>Vec</code></a>.</li>
+</ul>
+</li>
+</ul>
+<p>It is sound to create a <a href="../struct.Vec.html" title="struct aster_core::prelude::Vec"><code>Vec</code></a> from parts that satisfy these invariants.</p>
+<p>Conversely, the memory backing <code>ptr</code> obtained from <a href="../struct.Vec.html#method.as_mut_ptr" title="method aster_core::prelude::Vec::as_mut_ptr"><code>Vec::as_mut_ptr</code></a> or
+<a href="../struct.Vec.html#method.into_raw_parts_with_allocator" title="method aster_core::prelude::Vec::into_raw_parts_with_allocator"><code>Vec::into_raw_parts_with_allocator</code></a>-like methods may be deallocated
+using the allocator, with layout <a href="crate::alloc::Layout::array"><code>Layout::array::&lt;T&gt;(cap)</code></a>, provided
+that <a href="size_of"><code>size_of::&lt;T&gt;()</code></a> or <code>cap</code> is non-zero.
+To automatically handle the case where the allocation is zero-sized,
+it is recommended to use <a href="../struct.Vec.html#method.from_raw_parts_in" title="associated function aster_core::prelude::Vec::from_raw_parts_in"><code>Vec::from_raw_parts_in</code></a>, instead of manually
+deallocating.</p>
+</div></details><h2 id="structs" class="section-header">Structs<a href="#structs" class="anchor">§</a></h2><dl class="item-table"><dt><a class="struct" href="struct.Drain.html" title="struct aster_core::prelude::vec::Drain">Drain</a></dt><dd>A draining iterator for <code>Vec&lt;T&gt;</code>.</dd><dt><a class="struct" href="struct.ExtractIf.html" title="struct aster_core::prelude::vec::ExtractIf">Extract<wbr>If</a></dt><dd>An iterator which uses a closure to determine if an element should be removed.</dd><dt><a class="struct" href="struct.IntoIter.html" title="struct aster_core::prelude::vec::IntoIter">Into<wbr>Iter</a></dt><dd>An iterator that moves out of a vector.</dd><dt><a class="struct" href="struct.Splice.html" title="struct aster_core::prelude::vec::Splice">Splice</a></dt><dd>A splicing iterator for <code>Vec</code>.</dd><dt><a class="struct" href="struct.Vec.html" title="struct aster_core::prelude::vec::Vec">Vec</a></dt><dd>A contiguous growable array type, written as <code>Vec&lt;T&gt;</code>, short for ‘vector’.</dd><dt><a class="struct" href="struct.PeekMut.html" title="struct aster_core::prelude::vec::PeekMut">PeekMut</a><wbr><span class="stab unstable" title="">Experimental</span></dt><dd>Structure wrapping a mutable reference to the last item in a
+<code>Vec</code>.</dd></dl></section></div></main></body></html>
